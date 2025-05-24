@@ -1,18 +1,18 @@
-import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 
 const ContactPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-12 md:py-24 bg-gradient-to-r from-indigo-50 to-purple-50">
+      <section className="py-12 md:py-24 bg-gradient-to-r from-indigo-50 to-purple-50 px-4 sm:px-6 lg:px-12 xl:px-24">
         <div className="container px-4 md:px-6 text-center">
           <h1 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
             Contact Us
           </h1>
           <p className="mt-4 mx-auto max-w-[700px] text-gray-600 md:text-xl">
-            We're here to help you with any questions about our services or how
-            we can assist your academic journey
+            {
+              " We're here to help you with any questions about our services or how we can assist your academic journey"
+            }
           </p>
         </div>
       </section>
@@ -20,7 +20,7 @@ const ContactPage = () => {
       <Contact />
 
       {/* Map Section */}
-      <section className="w-full py-12 bg-white">
+      <section className="w-full py-12 bg-white px-4 sm:px-6 lg:px-12 xl:px-24">
         <div className="container px-4 md:px-6">
           <div className="rounded-lg overflow-hidden h-[400px] shadow-lg">
             <iframe

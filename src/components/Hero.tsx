@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32 xl:py-40 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 overflow-hidden">
+    <section className="w-full py-16 md:py-24 lg:py-32 xl:py-40 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 overflow-hidden px-4 sm:px-6 lg:px-12 xl:px-24">
       <div className="container px-4 md:px-6 relative">
         {/* Background elements for visual interest */}
         <div className="absolute inset-0 overflow-hidden">
@@ -144,7 +144,7 @@ const Hero = () => {
             </div>
             <h3 className="text-xl font-bold mb-2">Tailored Email Drafts</h3>
             <p className="text-gray-600">
-              Generate personalized email templates based on professor's
+              Generate personalized email templates based on professor&apos;s
               research interests.
             </p>
           </div>

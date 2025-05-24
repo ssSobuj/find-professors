@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -26,10 +25,13 @@ const EmailTemplate = ({ professor, emailDraft }: EmailTemplateProps) => {
   return (
     <div className="space-y-6 bg-white rounded-lg border border-gray-200 shadow-sm p-6">
       <div>
-        <h3 className="text-lg font-semibold">Email Draft for {professor.name}</h3>
+        <h3 className="text-lg font-semibold">
+          Email Draft for {professor.name}
+        </h3>
         <p className="text-sm text-gray-500">
-          This email has been generated based on your profile and {professor.name}'s research interests. 
-          Feel free to edit it before sending.
+          This email has been generated based on your profile and{" "}
+          {professor.name}&apos;s research interests. Feel free to edit it
+          before sending.
         </p>
       </div>
 
@@ -45,9 +47,15 @@ const EmailTemplate = ({ professor, emailDraft }: EmailTemplateProps) => {
             className="min-h-[400px] font-mono text-sm"
           />
         </TabsContent>
-        <TabsContent value="preview" className="border rounded-md p-4 min-h-[400px] whitespace-pre-wrap">
-          {email.split('\n').map((line, i) => (
-            <div key={i} className={line.startsWith('Subject:') ? 'font-bold mb-2' : ''}>
+        <TabsContent
+          value="preview"
+          className="border rounded-md p-4 min-h-[400px] whitespace-pre-wrap"
+        >
+          {email.split("\n").map((line, i) => (
+            <div
+              key={i}
+              className={line.startsWith("Subject:") ? "font-bold mb-2" : ""}
+            >
               {line}
             </div>
           ))}
@@ -55,17 +63,23 @@ const EmailTemplate = ({ professor, emailDraft }: EmailTemplateProps) => {
       </Tabs>
 
       <div className="flex gap-4">
-        <Button onClick={handleCopy} className="bg-academic-700 hover:bg-academic-800">
+        <Button
+          onClick={handleCopy}
+          className="bg-academic-700 hover:bg-academic-800"
+        >
           Copy to Clipboard
         </Button>
         <a
           href={`mailto:${professor.email}?subject=${encodeURIComponent(
-            email.split('\n')[0].replace('Subject: ', '')
-          )}&body=${encodeURIComponent(email.split('\n').slice(1).join('\n'))}`}
+            email.split("\n")[0].replace("Subject: ", "")
+          )}&body=${encodeURIComponent(email.split("\n").slice(1).join("\n"))}`}
           target="_blank"
           rel="noreferrer"
         >
-          <Button variant="outline" className="border-academic-500 text-academic-700 hover:bg-academic-50">
+          <Button
+            variant="outline"
+            className="border-academic-500 text-academic-700 hover:bg-academic-50"
+          >
             Open in Email Client
           </Button>
         </a>

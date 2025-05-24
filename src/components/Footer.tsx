@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="w-full py-6 bg-gradient-to-br from-indigo-900 to-blue-900 text-white">
+    <footer className="w-full py-6 bg-gradient-to-br from-indigo-900 to-blue-900 text-white px-4 sm:px-6 lg:px-12 xl:px-24">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center">

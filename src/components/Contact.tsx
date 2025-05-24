@@ -32,7 +32,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 bg-white">
+    <section
+      id="contact"
+      className="w-full py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-12 xl:px-24"
+    >
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 items-stretch">
           <div className="rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-8 md:p-10 h-full shadow-xl">
@@ -40,7 +43,7 @@ const Contact = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-2">Contact Us</h2>
                 <p className="text-indigo-100">
-                  We're here to help with any questions about our services
+                  We&apos;re here to help with any questions about our services
                 </p>
               </div>
 
@@ -120,7 +123,7 @@ const Contact = () => {
                 Send us a Message
               </h2>
               <p className="text-gray-600">
-                Have questions? We're here to help you succeed.
+                Have questions? We&apos;re here to help you succeed.
               </p>
             </div>
 

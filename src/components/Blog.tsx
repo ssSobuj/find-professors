@@ -34,7 +34,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <section className="w-full py-12 md:py-24 bg-gradient-to-br from-indigo-50 to-purple-50">
+    <section className="w-full py-12 md:py-24 bg-gradient-to-br from-indigo-50 to-purple-50 px-4 sm:px-6 lg:px-12 xl:px-24">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">

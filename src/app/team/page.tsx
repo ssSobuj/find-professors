@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Linkedin, Mail } from "lucide-react";
 
@@ -64,7 +63,7 @@ const Team = () => {
   return (
     <section
       id="team"
-      className="w-full py-16 md:py-24 bg-gradient-to-br from-indigo-50 to-purple-100"
+      className="w-full py-16 md:py-24 bg-gradient-to-br from-indigo-50 to-purple-100 px-4 sm:px-6 lg:px-12 xl:px-24"
     >
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">

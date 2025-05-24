@@ -63,7 +63,7 @@ const ProfessorCard = ({ professor }: ProfessorCardProps) => {
       </CardContent>
       <CardFooter className="pt-2">
         <div className="flex gap-2 w-full">
-          <Link to={`/email?professorId=${professor.id}`} className="w-full">
+          <Link href={`/email?professorId=${professor.id}`} className="w-full">
             <Button
               variant="outline"
               className="w-full border-academic-500 text-academic-700 hover:bg-academic-50"

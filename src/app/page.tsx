@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -15,7 +14,7 @@ const Home = () => {
       <Hero />
 
       {/* Why Choose MailProfessor Section */}
-      <section className="w-full py-12 md:py-24 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50">
+      <section className="w-full py-12 md:py-24 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50  px-4 sm:px-6 lg:px-12 xl:px-24">
         <div className="container px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
@@ -70,8 +69,9 @@ const Home = () => {
                 <h3 className="text-xl font-bold">Time-Saving Automation</h3>
                 <p className="text-gray-500">
                   Generate professional outreach emails in seconds. Our
-                  platform's automation tools save you time while ensuring your
-                  application meets the high standards of academic institutions.
+                  platform&apos;s automation tools save you time while ensuring
+                  your application meets the high standards of academic
+                  institutions.
                 </p>
               </CardContent>
             </Card>
@@ -96,7 +96,7 @@ const Home = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="w-full py-12 md:py-24 bg-white">
+      <section className="w-full py-12 md:py-24 bg-white px-4 sm:px-6 lg:px-12 xl:px-24">
         <div className="container px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
@@ -310,14 +310,14 @@ const Home = () => {
       </section>
 
       {/* User Feedback Section */}
-      <section className="w-full py-12 md:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="w-full py-12 md:py-24 bg-gradient-to-br from-purple-50 to-pink-50 px-4 sm:px-6 lg:px-12 xl:px-24">
         <div className="container px-4 md:px-6">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
               Our User Feedback
             </h2>
             <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
-              Here's what our users are saying about their success with
+              Here&apos;s what our users are saying about their success with
               MailProfessor
             </p>
           </div>
@@ -356,10 +356,10 @@ const Home = () => {
                   ))}
                 </div>
                 <p className="text-gray-600">
-                  "I applied to 12 professors using MailProfessor's personalized
-                  email templates and got 5 positive responses! The professor
-                  matching was incredibly accurate, finding researchers whose
-                  interests aligned perfectly with mine."
+                  I applied to 12 professors using MailProfessor&apos;s
+                  personalized email templates and got 5 positive responses! The
+                  professor matching was incredibly accurate, finding
+                  researchers whose interests aligned perfectly with mine.
                 </p>
               </CardContent>
             </Card>
@@ -397,10 +397,10 @@ const Home = () => {
                   ))}
                 </div>
                 <p className="text-gray-600">
-                  "The time I saved using MailProfessor was incredible. The
+                  The time I saved using MailProfessor was incredible. The
                   platform analyzed my CV and created personalized outreach that
-                  actually got responses. I'm now working with my top choice
-                  professor at MIT!"
+                  actually got responses. I&apos;m now working with my top
+                  choice professor at MIT!
                 </p>
               </CardContent>
             </Card>
@@ -449,10 +449,10 @@ const Home = () => {
                   </svg>
                 </div>
                 <p className="text-gray-600">
-                  "As an international student, I was struggling to make
+                  As an international student, I was struggling to make
                   connections with professors. MailProfessor helped me find the
                   right mentors and create compelling outreach emails that
-                  showcased my research potential."
+                  showcased my research potential.
                 </p>
               </CardContent>
             </Card>
@@ -461,7 +461,7 @@ const Home = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="w-full py-12 md:py-24 bg-gradient-to-br from-indigo-100 to-blue-50">
+      <section className="w-full py-12 md:py-24 bg-gradient-to-br from-indigo-100 to-blue-50 px-4 sm:px-6 lg:px-12 xl:px-24">
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 lg:grid-cols-2 items-center">
             <div className="space-y-6">
@@ -470,7 +470,7 @@ const Home = () => {
               </h2>
               <p className="text-gray-600 md:text-xl">
                 Increase your chances of acceptance by sending tailored emails
-                that demonstrate your genuine interest in a professor's
+                that demonstrate your genuine interest in a professor&apos;s
                 research.
               </p>
               <ul className="space-y-3">
@@ -490,7 +490,7 @@ const Home = () => {
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                   <span className="text-gray-600">
-                    Email templates customized to each professor's research
+                    Email templates customized to each professor&apos;s research
                     focus
                   </span>
                 </li>

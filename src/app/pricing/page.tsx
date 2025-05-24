@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import { Check } from "lucide-react";
 
@@ -7,7 +6,7 @@ const PricingPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-12 md:py-24 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <section className="py-12 md:py-24 bg-gradient-to-r from-blue-50 to-indigo-50 px-4 sm:px-6 lg:px-12 xl:px-24">
         <div className="container px-4 md:px-6 text-center">
           <h1 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
             Simple, Transparent Pricing
@@ -20,7 +19,7 @@ const PricingPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white px-4 sm:px-6 lg:px-12 xl:px-24">
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 md:grid-cols-3 lg:gap-16">
             {/* Free Plan */}
@@ -167,7 +166,7 @@ const PricingPage = () => {
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Tailored to professor's research</span>
+                    <span>Tailored to professor&apos;s research</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
@@ -202,7 +201,7 @@ const PricingPage = () => {
                   Do you offer refunds?
                 </h3>
                 <p className="mt-2 text-gray-600">
-                  Yes, we offer a 7-day money-back guarantee if you're not
+                  Yes, we offer a 7-day money-back guarantee if you&apos;re not
                   satisfied with our services.
                 </p>
               </div>

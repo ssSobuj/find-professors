@@ -8,8 +8,8 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-gray-200 bg-white/90 backdrop-blur-md sticky top-0 z-50">
-      <div className="container flex h-20 items-center justify-between">
+    <header className=" w-full border-b border-gray-200 bg-white/90 backdrop-blur-md sticky top-0 z-50 px-4 sm:px-6 lg:px-12 xl:px-24">
+      <div className="container flex h-20 items-center justify-between ">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2">
             <img
@@ -17,14 +17,14 @@ const Navbar = () => {
               alt="MailProfessor Logo"
               className="h-12 w-auto"
             />
-            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+            <span className="text-2xl hidden md:block font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
               MailProfessor
             </span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           <Link
             href="/"
             className="text-base font-medium text-gray-700 hover:text-indigo-600 transition-colors"
@@ -61,7 +61,7 @@ const Navbar = () => {
           <Button
             variant="outline"
             size="sm"
-            className="hidden md:flex border-indigo-500 text-indigo-700 hover:bg-indigo-50"
+            className="hidden lg:flex border-indigo-500 text-indigo-700 hover:bg-indigo-50"
           >
             Sign In
           </Button>
@@ -74,7 +74,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+            className="lg:hidden p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -88,7 +88,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 py-2">
+        <div className="lg:hidden bg-white border-t border-gray-200 py-2 w-full md:w-[50%]">
           <nav className="flex flex-col space-y-3 px-4 py-3">
             <Link
               href="/"
