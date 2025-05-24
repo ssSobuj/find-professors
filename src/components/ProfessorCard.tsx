@@ -1,3 +1,4 @@
+// components/ProfessorCard.tsx
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,12 +9,21 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Professor } from "@/utils/mockData";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 interface ProfessorCardProps {
   professor: Professor;
 }
 
 const ProfessorCard = ({ professor }: ProfessorCardProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
     <Card className="flex flex-col overflow-hidden transition-all hover:shadow-md">
       <div className="relative h-48 overflow-hidden">
@@ -21,6 +31,8 @@ const ProfessorCard = ({ professor }: ProfessorCardProps) => {
           src={professor.imageUrl}
           alt={professor.name}
           className="w-full h-full object-cover object-center"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute top-2 right-2">
           <Badge variant="secondary" className="bg-white text-academic-800">
@@ -63,7 +75,11 @@ const ProfessorCard = ({ professor }: ProfessorCardProps) => {
       </CardContent>
       <CardFooter className="pt-2">
         <div className="flex gap-2 w-full">
-          <Link href={`/email?professorId=${professor.id}`} className="w-full">
+          <Link
+            href={`/email?professorId=${professor.id}`}
+            className="w-full"
+            suppressHydrationWarning
+          >
             <Button
               variant="outline"
               className="w-full border-academic-500 text-academic-700 hover:bg-academic-50"
@@ -76,6 +92,7 @@ const ProfessorCard = ({ professor }: ProfessorCardProps) => {
             target="_blank"
             rel="noopener noreferrer"
             className="w-full"
+            suppressHydrationWarning
           >
             <Button className="w-full bg-academic-700 hover:bg-academic-800">
               View Profile

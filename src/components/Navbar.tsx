@@ -63,13 +63,13 @@ const Navbar = () => {
             size="sm"
             className="hidden lg:flex border-indigo-500 text-indigo-700 hover:bg-indigo-50"
           >
-            Sign In
+            <Link href="/signin">Sign In</Link>
           </Button>
           <Button
             size="sm"
             className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white"
           >
-            Get Started
+            <Link href="/signup"> Get Started</Link>
           </Button>
 
           {/* Mobile menu button */}

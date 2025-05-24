@@ -1,5 +1,5 @@
-
-import { useState } from "react";
+// components/SearchForm.tsx
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -23,19 +23,29 @@ interface SearchFormProps {
 }
 
 const SearchForm = ({ onSearch }: SearchFormProps) => {
-  const [country, setCountry] = useState<string>("");
-  const [university, setUniversity] = useState<string>("");
-  const [department, setDepartment] = useState<string>("");
-  const [researchArea, setResearchArea] = useState<string>("");
-  const [keyword, setKeyword] = useState<string>("");
+  const [isMounted, setIsMounted] = useState(false);
+  const [country, setCountry] = useState("");
+  const [university, setUniversity] = useState("");
+  const [department, setDepartment] = useState("");
+  const [researchArea, setResearchArea] = useState("");
+  const [keyword, setKeyword] = useState("");
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSearch({ country, university, department, researchArea, keyword });
   };
 
+  if (!isMounted) return null;
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-6 bg-white rounded-lg border border-gray-200 shadow-sm">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-4 p-6 bg-white rounded-lg border border-gray-200 shadow-sm"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="country">Country</Label>
@@ -61,9 +71,11 @@ const SearchForm = ({ onSearch }: SearchFormProps) => {
             <SelectContent>
               <SelectItem value="">All Universities</SelectItem>
               {universities
-                .filter(uni => !country || uni.country === country)
+                .filter((uni) => !country || uni.country === country)
                 .map((uni, index) => (
-                  <SelectItem key={index} value={uni.name}>{uni.name}</SelectItem>
+                  <SelectItem key={index} value={uni.name}>
+                    {uni.name}
+                  </SelectItem>
                 ))}
             </SelectContent>
           </Select>
@@ -78,7 +90,9 @@ const SearchForm = ({ onSearch }: SearchFormProps) => {
             <SelectContent>
               <SelectItem value="">All Departments</SelectItem>
               {departments.map((dept, index) => (
-                <SelectItem key={index} value={dept}>{dept}</SelectItem>
+                <SelectItem key={index} value={dept}>
+                  {dept}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
@@ -93,7 +107,9 @@ const SearchForm = ({ onSearch }: SearchFormProps) => {
             <SelectContent>
               <SelectItem value="">All Research Areas</SelectItem>
               {researchAreas.map((area, index) => (
-                <SelectItem key={index} value={area}>{area}</SelectItem>
+                <SelectItem key={index} value={area}>
+                  {area}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
@@ -110,7 +126,10 @@ const SearchForm = ({ onSearch }: SearchFormProps) => {
         />
       </div>
 
-      <Button type="submit" className="w-full bg-academic-700 hover:bg-academic-800">
+      <Button
+        type="submit"
+        className="w-full bg-academic-700 hover:bg-academic-800"
+      >
         Search Professors
       </Button>
     </form>
