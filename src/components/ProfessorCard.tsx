@@ -1,9 +1,13 @@
-
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Professor } from "@/utils/mockData";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface ProfessorCardProps {
   professor: Professor;
@@ -13,9 +17,9 @@ const ProfessorCard = ({ professor }: ProfessorCardProps) => {
   return (
     <Card className="flex flex-col overflow-hidden transition-all hover:shadow-md">
       <div className="relative h-48 overflow-hidden">
-        <img 
-          src={professor.imageUrl} 
-          alt={professor.name} 
+        <img
+          src={professor.imageUrl}
+          alt={professor.name}
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute top-2 right-2">
@@ -39,7 +43,11 @@ const ProfessorCard = ({ professor }: ProfessorCardProps) => {
             <h4 className="text-sm font-medium mb-1">Research Interests</h4>
             <div className="flex flex-wrap gap-1">
               {professor.researchInterests.map((interest, index) => (
-                <Badge key={index} variant="outline" className="bg-academic-50 text-academic-800 border-academic-200">
+                <Badge
+                  key={index}
+                  variant="outline"
+                  className="bg-academic-50 text-academic-800 border-academic-200"
+                >
                   {interest}
                 </Badge>
               ))}
@@ -56,13 +64,16 @@ const ProfessorCard = ({ professor }: ProfessorCardProps) => {
       <CardFooter className="pt-2">
         <div className="flex gap-2 w-full">
           <Link to={`/email?professorId=${professor.id}`} className="w-full">
-            <Button variant="outline" className="w-full border-academic-500 text-academic-700 hover:bg-academic-50">
+            <Button
+              variant="outline"
+              className="w-full border-academic-500 text-academic-700 hover:bg-academic-50"
+            >
               Draft Email
             </Button>
           </Link>
-          <a 
-            href={professor.website} 
-            target="_blank" 
+          <a
+            href={professor.website}
+            target="_blank"
             rel="noopener noreferrer"
             className="w-full"
           >
